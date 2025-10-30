@@ -28,8 +28,8 @@ export default function Header() {
                         <Image
                             src="/images/logo.jpg"
                             alt="HealthCare Logo"
-                            width={120}            
-                            height={40}           
+                            width={170}            
+                            height={80}           
                             priority               
                         />
                     </div>
