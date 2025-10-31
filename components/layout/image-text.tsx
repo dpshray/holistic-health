@@ -3,9 +3,10 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import clsx from "clsx";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Badge } from "../ui/badge";
 
 interface ImageTextSectionProps {
   title: string;
@@ -19,6 +20,7 @@ interface ImageTextSectionProps {
   imagePosition?: "left" | "right";
   smallImageShift?: "left" | "right";
   tag?: string;
+  points?: string[];
 }
 
 export default function ImageTextSection({
@@ -33,6 +35,7 @@ export default function ImageTextSection({
   imagePosition = "left",
   smallImageShift = "left", 
   tag,
+  points,
 }: ImageTextSectionProps) {
   const isImageLeft = imagePosition === "left";
 
@@ -88,9 +91,9 @@ export default function ImageTextSection({
           {/* Text Section */}
           <div>
             {tag && (
-              <div className="inline-block bg-[#0891b2] text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              <Badge variant="green" className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-2">
                 {tag}
-              </div>
+              </Badge>
             )}
 
             <h2 className="text-4xl md:text-5xl font-normal text-[#12141D] mb-6 leading-snug">
@@ -106,6 +109,24 @@ export default function ImageTextSection({
             {description2 && (
               <p className="text-gray-600 mb-6 leading-relaxed text-xl font-normal">{description2}</p>
             )}
+
+            {/* Feature Points */}
+            {points && points.length > 0 && (
+              <ul className="space-y-3 mb-8">
+                {points.map((point, index) => (
+                  <li
+                    key={index}
+                    className="flex items-center gap-3 px-4 py-2 rounded-full w-fit"
+                  >
+                    <span className="flex items-center justify-center w-5 h-5 bg-yellow-500 rounded-full">
+                      <Check className=" text-white w-3 h-3" />
+                    </span>
+                    <span className="text-base font-medium">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+
 
             {buttonLabel && (
                 <div className="mt-12 flex justify-start">

@@ -6,7 +6,20 @@ import Testimonials from "@/components/layout/Testimonials";
 export default function Home() {
   return (
     <div>
-      <Hero />
+      <Hero 
+        title={
+          <>
+            Empowering Healthcare
+            <br />
+            with Complete Solutions
+          </>
+        }
+        subtitle="At Holistcs Healthcare, we are commited to a holistc approach—oﬀering a wide range of
+          trusted medical products, devices, and solutons all in one place."
+        backgroundImage="/images/hero.jpg"
+        showButtons={true}
+
+      />
       <MedicalCategories />
       <ImageTextSection
         title="Building bridges between companies and customers"
