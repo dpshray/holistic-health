@@ -24,7 +24,7 @@ export default function Header() {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
-                    <div className="shrink-0">
+                    <Link href="/" className="shrink-0">
                         <Image
                             src="/images/logo.jpg"
                             alt="HealthCare Logo"
@@ -32,7 +32,7 @@ export default function Header() {
                             height={80}           
                             priority               
                         />
-                    </div>
+                    </Link>
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center gap-8">
@@ -57,9 +57,9 @@ export default function Header() {
                     </nav>
 
                     {/* Desktop CTA Button */}
-                    <div className="hidden md:block">
+                    <Link href="/contact" className="hidden md:block">
                         <Button variant="green" className="rounded-full"> Contact Us</Button>
-                    </div>
+                    </Link>
 
                     {/* Mobile Menu Button */}
                     <button className="md:hidden" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
@@ -88,9 +88,11 @@ export default function Header() {
                                 </Link>
                             )
                         })}
-                        <Button variant="green" className="w-full mt-4">
-                            Contact Us
-                        </Button>
+                        <Link href="/contact" >
+                            <Button variant="green" className="w-full mt-4">
+                                Contact Us
+                            </Button>
+                        </Link>
                     </nav>
                 )}
             </div>
