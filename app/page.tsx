@@ -1,4 +1,4 @@
-import ImageTextSection from "@/components/layout/building-bridges";
+import ImageTextSection from "@/components/layout/image-text";
 import Hero from "@/components/layout/Hero";
 import MedicalCategories from "@/components/layout/medical-categories";
 
