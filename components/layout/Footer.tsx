@@ -10,7 +10,7 @@ import { FaXTwitter } from "react-icons/fa6"
 
 export default function Footer() {
     return (
-        <footer className="bg-[#202020] text-white py-12">
+        <footer className="bg-[#202020] text-white py-16">
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
                 {/* Logo and tagline */}
                 <div>

@@ -1,6 +1,7 @@
 import ImageTextSection from "@/components/layout/image-text";
 import Hero from "@/components/layout/Hero";
 import MedicalCategories from "@/components/layout/medical-categories";
+import Testimonials from "@/components/layout/Testimonials";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
           across the medical industry."
         buttonLabel="View Reports"
         mainImage="/images/image1.jpg"
-        smallImage="/images/image1.jpg"
+        smallImage="/images/image2.jpg"
         imagePosition="left"
         smallImageShift="left"
       />
@@ -29,10 +30,11 @@ export default function Home() {
         description2="We are making every business grow!"
         buttonLabel="Contact Now"
         mainImage="/images/image2.jpg"
-        smallImage="/images/image2.jpg"
+        smallImage="/images/image1.jpg"
         imagePosition="right"
         smallImageShift="right"
       />
+      <Testimonials />
     </div>
   );
 }

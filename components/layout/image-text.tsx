@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import clsx from "clsx";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 interface ImageTextSectionProps {
   title: string;
@@ -45,7 +46,13 @@ export default function ImageTextSection({
           )}
         >
           {/* Image Section */}
-          <div className="relative">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: false, amount: 0.3 }}
+            className="relative"
+          >
             <div className="rounded-xl overflow-hidden shadow-lg h-[300px] sm:h-[400px] md:h-[500px]">
               <Image
                 src={mainImage}
@@ -57,10 +64,14 @@ export default function ImageTextSection({
 
             {/* Small Image Overlay */}
             {smallImage && (
-              <div
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                viewport={{ once: true }}
                 className={clsx(
                   "absolute -bottom-8 w-40 sm:w-48 h-40 sm:h-48 rounded-lg overflow-hidden shadow-lg border-4 border-white",
-                  smallImageShift === "left" ? "-left-8" : "-right-8"
+                  smallImageShift === "left" ? "-left-2" : "-right-2"
                 )}
               >
                 <Image
@@ -70,9 +81,9 @@ export default function ImageTextSection({
                   alt="Overlay image"
                   className="w-full h-full rounded-lg"
                 />
-              </div>
+              </motion.div>
             )}
-          </div>
+          </motion.div>
 
           {/* Text Section */}
           <div>
