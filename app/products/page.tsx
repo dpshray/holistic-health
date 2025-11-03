@@ -2,52 +2,58 @@ import { ProductCard, ProductCardProps } from "@/components/products/product-car
 
 const products: ProductCardProps[] = [
     {
-        icon: "m",
+        image: "/images/product1.jpg",
         title: "Medicines",
         items: ["Pharmaceutical Drugs", "Salines & IV Fluids"],
-        learnMoreLink: "#",
+        slug: "medicines",
     },
     {
-        icon: "f",
+        image: "/images/product2.jpg",
         title: "Dermatology & Cosmetology",
         description:
         "Specialized skin treatment products, dermatology care products, medicated creams, acne solutions, sunscreen, and professional cosmetology supplies.",
+        slug: "dermatology",
     },
     {
-        icon: "l",
+        image: "/images/product3.jpg",
         title: "Nutraceuticals & Food Supplements",
         description:
         "Immunity boosters, protein supplements, vitamin supplements, minerals, probiotics from brands like GNC, Airway, Herbalde, Himalaya",
+        slug: "nutraceuticals",
     },
     {
-        icon: "l",
+        image: "/images/product4.jpg",
         title: "Medical Devices",
         description:
         "Blood pressure monitors, ECG machines, pulse oximeters, thermometers, infusion pumps, nebulizers, glucometers, fetal monitors, defibrillators.",
+        slug: "medical-devices",
     },
     {
-        icon: "c",
+        image: "/images/product5.jpg",
         title: "Medical Furniture",
         description:
         "Crash carts, medical carts, motorized hospital beds, bedside lockers, cardiac tables, stretchers, over-bed tables, examination couches.",
+        slug: "medical-furniture",
     },
     {
-        icon: "s",
+        image: "/images/product6.jpg",
         title: "Equipment",
         description:
         "Ventilators, anesthesia machines, surgical lights, OT tables, sterilizers, diagnostic imaging equipment, suction machines, autoclaves.",
+        slug: "equipment",
     },
     {
-        icon: "m",
+        image: "/images/product7.jpg",
         title: "Surgical & Disposables",
         items: ["Masks - 3-ply, N95", "Gloves - Disposable & surgical", "Protective wear - Caps, gowns"],
-        learnMoreLink: "#",
+        slug: "surgical-disposables",
     },
     {
-        icon: "l",
+        image: "/images/product8.jpg",
         title: "Medical Linen & Scrubs",
         description:
         "Hospital scrubs, patient gowns, bedsheets, pillow covers, blankets, drapes — available in standard and customized designs.",
+        slug: "medical-linen",
     },
 ]
 

@@ -26,7 +26,7 @@ interface SocialLink {
 
 export default function Footer() {
     const customerServiceLinks: FooterLink[] = [
-        { label: "Contact Us", href: "#" },
+        { label: "Contact Us", href: "/contact" },
         { label: "Order Tracking", href: "#" },
         { label: "Returns", href: "#" },
         { label: "FAQs", href: "#" },

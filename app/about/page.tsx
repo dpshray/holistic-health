@@ -1,5 +1,6 @@
 import Hero from "@/components/layout/Hero";
 import ImageTextSection from "@/components/layout/image-text";
+import QuoteSection from "@/components/layout/quote-section";
 
 export default function AboutPage() {
     return (
@@ -7,34 +8,21 @@ export default function AboutPage() {
             <Hero
                 title="Holistic Solutions for a Healthier Tomorrow"
                 subtitle="At Holistics Healthcare, we believe in making quality healthcare accessible through trusted medical supplies and innovative procurement solutions."
-                backgroundImage="/images/about-hero.jpg"
+                backgroundImage="/images/about-hero2.jpg"
                 showButtons={false}
-                height="small"
+                height="medium"
+                overlay="bg-black/60"
+            />
+            <QuoteSection text="We always stand at the forefront of healthcare supply and innovation, staying ahead by embracing the latest medical advancements, trusted global partnerships, and technology-driven procurement solutions." />
+            <Hero
+                title="Holistic Solutions for a Healthier Tomorrow"
+                subtitle="At Holistics Healthcare, we believe in making quality healthcare accessible through trusted medical supplies and innovative procurement solutions."
+                backgroundImage="/images/about-hero3.png"
+                showButtons={false}
+                height="medium"
                 overlay="bg-black/60"
             />
             <ImageTextSection
-                title="Trusted Holistcs Care For a Brighter Future"
-                description="Founded with a vision to streamline medical supply procurement,
-                    Holistcs Healthcare Pvt. Ltd. was established to bridge the gap
-                    between healthcare providers and trusted manufacturers.
-                    From our beginnings in [Insert Year], we’ve grown into a reliable
-                    name for hospitals, clinics, and medical professionals across Nepal."
-                buttonLabel="See all"
-                mainImage="/images/about1.jpg"
-                imagePosition="left"
-            />
-            <ImageTextSection
-                tag="About Medical life"
-                title="Who We Are"
-                description="Holistcs is a trusted medical supply partner, commited to
-                    meetng the complete procurement needs of healthcare facilites.
-                    Our vision is to simplify hospital operatons by becoming a single-
-                    window source for quality medical essentals."
-                mainImage="/images/about2.jpg"
-                imagePosition="right"
-            />
-            <ImageTextSection
-                tag="About Medical life"
                 title="Our Mission"
                 description="To empower healthcare providers with reliable, aﬀordable, and
                     top-quality medical products, ensuring they can focus on patent

@@ -50,7 +50,7 @@ export default function ContactPage() {
             </section>
 
             {/* Contact Section */}
-            <section className="py-12 px-4">
+            <section className="pb-12 px-4">
                 <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Contact Form */}
                     <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
