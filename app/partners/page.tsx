@@ -46,7 +46,7 @@ export default function PartnersPage() {
       </section>
 
       {/* Partners Sections */}
-      <section className="py-12 px-4">
+      <section className="py-6 sm:py-12 px-4">
           <div className="max-w-7xl mx-auto space-y-20">
               {partnersData.map((category) => (
                   <PartnerCategory key={category.title} title={category.title} partners={category.partners} col={category.col} />
