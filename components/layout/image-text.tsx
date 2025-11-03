@@ -20,6 +20,7 @@ interface ImageTextSectionProps {
   imagePosition?: "left" | "right";
   smallImageShift?: "left" | "right";
   tag?: string;
+  featureTitle?: string;
   points?: string[];
 }
 
@@ -35,6 +36,7 @@ export default function ImageTextSection({
   imagePosition = "left",
   smallImageShift = "left", 
   tag,
+  featureTitle,
   points,
 }: ImageTextSectionProps) {
   const isImageLeft = imagePosition === "left";
@@ -96,7 +98,7 @@ export default function ImageTextSection({
               </Badge>
             )}
 
-            <h2 className="text-4xl md:text-5xl font-normal text-[#12141D] mb-6 leading-snug">
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#12141D] mb-4 leading-tight">
               {title}
               {subtitle && (
                 <span className="block text-[#92A7B0] font-normal mt-1">
@@ -105,23 +107,28 @@ export default function ImageTextSection({
               )}
             </h2>
 
-            <p className="text-gray-600 mb-6 leading-relaxed text-xl font-normal">{description}</p>
+            <p className="text-gray-600 mb-4 leading-relaxed text-lg font-normal">{description}</p>
             {description2 && (
-              <p className="text-gray-600 mb-6 leading-relaxed text-xl font-normal">{description2}</p>
+              <p className="text-gray-600 mb-4 leading-relaxed text-xl font-normal">{description2}</p>
             )}
 
             {/* Feature Points */}
+            {featureTitle && (
+              <h3 className="text-3xl md:text-4xl font-semibold text-[#12141D] mb-4 leading-tight">
+                {featureTitle}
+              </h3>
+            )}
             {points && points.length > 0 && (
-              <ul className="space-y-3 mb-8">
+              <ul className="mb-8 space-y-4">
                 {points.map((point, index) => (
                   <li
                     key={index}
-                    className="flex items-center gap-3 px-4 py-2 rounded-full w-fit"
+                    className="flex items-center gap-3"
                   >
-                    <span className="flex items-center justify-center w-5 h-5 bg-yellow-500 rounded-full">
+                    <span className="flex items-center justify-center w-5 h-5 bg-yellow-500 rounded-full shrink-0">
                       <Check className=" text-white w-3 h-3" />
                     </span>
-                    <span className="text-base font-medium">{point}</span>
+                    <span className="text-gray-600 text-base font-normal leading-relaxed">{point}</span>
                   </li>
                 ))}
               </ul>

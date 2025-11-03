@@ -1,20 +1,27 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 
 export interface ProductCardProps {
-    icon: string
+    image: string
     title: string
     description?: string
     items?: string[]
-    learnMoreLink?: string
+    slug?: string
 }
 
-export function ProductCard({ icon, title, description, items, learnMoreLink }: ProductCardProps) {
+export function ProductCard({ image, title, description, items, slug }: ProductCardProps) {
     return (
-        <div className="rounded-2xl overflow-hidden shadow-sm border border-border bg-card hover:shadow-md transition-shadow">
-            <div className="h-40 bg-linear-to-b from-purple-200 to-purple-100 flex items-center justify-center">
-                <span className="text-6xl font-normal text-purple-600">{icon}</span>
+        <Link href={`/products/${slug}`} className="rounded-2xl overflow-hidden shadow-sm border border-border bg-card hover:shadow-md transition-shadow">
+            <div className="h-48 bg-linear-to-b from-purple-200 to-purple-100 flex items-center justify-center">
+                <Image
+                    src={image}
+                    alt={title}
+                    width={96} 
+                    height={96}
+                    className="w-full h-full object-cover"
+                />
             </div>
 
             <div className="p-6">
@@ -31,13 +38,7 @@ export function ProductCard({ icon, title, description, items, learnMoreLink }: 
                         ))}
                     </ul>
                 )}
-
-                {learnMoreLink && (
-                    <Link href={learnMoreLink} className="text-purple-600 hover:text-purple-700 text-sm font-medium">
-                        Learn more
-                    </Link>
-                )}
             </div>
-        </div>
+        </Link>
     )
 }

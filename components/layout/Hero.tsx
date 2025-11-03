@@ -8,6 +8,7 @@ interface HeroSectionProps {
     showButtons?: boolean
     overlay?: string
     height?: "default" | "small" | "large"
+    textColor?: string
     buttonText?: {
         primary?: string
         secondary?: string
@@ -20,7 +21,8 @@ export default function Hero({
     backgroundImage,
     showButtons = true,
     height = "default",
-    overlay = "bg-black/40",
+    overlay,
+    textColor = "text-white",
     buttonText = {
         primary: "Shop Now",
         secondary: "Learn More",
@@ -42,15 +44,15 @@ export default function Hero({
             />
 
             {/* Overlay */}
-            <div className={`absolute inset-0 ${overlay}`} />
+            {overlay && <div className={`absolute inset-0 ${overlay}`} />}
 
             {/* Content */}
             <div className="relative h-full flex flex-col items-center justify-center text-center px-4">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-4 text-balance leading-snug">
+                <h1 className={`text-4xl md:text-5xl lg:text-6xl font-bold ${textColor} mb-4 text-balance leading-snug`}>
                     {title}
                 </h1>
 
-                <p className="text-md md:text-lg text-gray-100 mb-8 max-w-3xl">
+                <p className={`text-md md:text-lg ${textColor} mb-8 max-w-3xl`}>
                     {subtitle}
                 </p>
 

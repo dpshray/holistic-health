@@ -18,7 +18,7 @@ export default function Home() {
           trusted medical products, devices, and solutons all in one place."
         backgroundImage="/images/hero.jpg"
         showButtons={true}
-
+        overlay="bg-black/40"
       />
       <MedicalCategories />
       <ImageTextSection

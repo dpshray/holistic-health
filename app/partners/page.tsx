@@ -29,30 +29,30 @@ const partnersData: PartnerCategoryProps[] = [
 ]
 
 export default function PartnersPage() {
-    return (
-        <main>
-            <Hero
-                title="Holistic Solutions for a Healthier Tomorrow"
-                subtitle="At Holistics Healthcare, we believe in making quality healthcare accessible through trusted medical supplies and innovative procurement solutions."
-                backgroundImage="/images/about-hero.jpg"
-                showButtons={false}
-                height="small"
-                overlay="bg-black/60"
-            />
+  return (
+    <main>
+      <Hero
+        title="Holistic Solutions for a Healthier Tomorrow"
+        subtitle="At Holistics Healthcare, we believe in making quality healthcare accessible through trusted medical supplies and innovative procurement solutions."
+        backgroundImage="/images/about-hero.jpg"
+        showButtons={false}
+        height="small"
+        overlay="bg-black/60"
+      />
 
-            {/* Header Section */}
-            <section className="py-6 sm:py-10 text-center">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-normal text-foreground mb-2">Partners</h1>
-            </section>
+      {/* Header Section */}
+      <section className="py-6 sm:py-10 text-center">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-normal text-foreground mb-2">Partners</h1>
+      </section>
 
-            {/* Partners Sections */}
-                <section className="py-12 px-4">
-                    <div className="max-w-7xl mx-auto space-y-20">
-                        {partnersData.map((category) => (
-                            <PartnerCategory key={category.title} title={category.title} partners={category.partners} col={category.col} />
-                        ))}
-                    </div>
-                </section>
-        </main>
-    )
+      {/* Partners Sections */}
+      <section className="py-12 px-4">
+          <div className="max-w-7xl mx-auto space-y-20">
+              {partnersData.map((category) => (
+                  <PartnerCategory key={category.title} title={category.title} partners={category.partners} col={category.col} />
+              ))}
+          </div>
+      </section>
+    </main>
+  )
 }
