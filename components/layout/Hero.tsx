@@ -7,7 +7,7 @@ interface HeroSectionProps {
     backgroundImage?: string
     showButtons?: boolean
     overlay?: string
-    height?: "default" | "small" | "large"
+    height?: "default" | "small" | "large" | "medium"
     textColor?: string
     buttonText?: {
         primary?: string
@@ -30,6 +30,7 @@ export default function Hero({
 }: HeroSectionProps) {
     const heightClasses = {
         small: "h-[350px]",
+        medium: "h-[400px] md:h-[420px]",
         default: "h-[500px] md:h-[600px]",
         large: "h-[700px] md:h-[800px]",
     }
